@@ -21,12 +21,12 @@ vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
     stack<int> sta;
 
     for (int i = size2-1; i >= 0; --i) {
-        while (!sta.empty() && sta.top() <= nums2[i]) {
+        while (!sta.empty() && sta.top() <= nums2[i]) {     /**<个子矮的全部出栈 */
             sta.pop();
         }
 
         map[nums2[i]] = sta.empty() ? -1 : sta.top();
-        sta.push(nums2[i]);
+        sta.push(nums2[i]);                                 /**<高个子入栈 */
     }
 
     vector<int> res;
@@ -35,6 +35,7 @@ vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
     }
     return res;
 }
+
 
 int main(int argc, char *argv[])
 {

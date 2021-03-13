@@ -1,15 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/** \brief      maxProfit 买卖股票的最佳时机 121
+/** \brief      trap 接雨水 42
  *  \author     wzk
  *  \copyright  GNU Public License
  *  \version    1.0 
- *  \date       2020-2-20
- *  \remark     动态规划
+ *  \date       2020-3-11
  * 
  *  \param[in] prices  输入数组
- *  \return            返回股票收益最大值
+ *  \return            最大接水量
  */
 int trap2(vector<int>& height) {
     int n = height.size();
@@ -30,7 +29,7 @@ int trap(vector<int>& height) {
     int n = height.size();
     if (n == 0)
         return 0;
-        
+
     int res = 0;
     int low = 0, high = n-1;
     int lmax = height[0], rmax = height[n - 1];

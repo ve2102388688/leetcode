@@ -66,13 +66,24 @@ ListNode* changeTwoNode(ListNode* head, int v1, int v2) {
         }
     }
 
+
     /**<需要都找到，否则不做处理 */
     if (v1Node != nullptr && v2Node != nullptr) {
-        v1Pre->next = v2Node;
-        v2Node->next = v1Next;
-        
-        v2Pre->next = v1Node;
-        v1Node->next = v2Next;
+        if(v1Node->next == v2Node) {
+            v1Pre->next = v2Node;
+            v2Node->next = v1Node;
+            v1Node->next = v2Next;
+        }else if(v2Node->next == v1Node){
+            v2Pre->next = v1Node;
+            v1Node->next = v2Node;
+            v2Node->next = v1Next;
+        } else {
+            v1Pre->next = v2Node;
+            v2Node->next = v1Next;
+            
+            v2Pre->next = v1Node;
+            v1Node->next = v2Next;
+        }
     }
 
     ListNode *temp = dummy->next;
@@ -83,10 +94,10 @@ ListNode* changeTwoNode(ListNode* head, int v1, int v2) {
 int main(int argc, char *argv[])
 {
     /**<创建链表 */
-    vector<int> s = {1, 2, 3, 4, 5, 6};
+    vector<int> s = {1, 2};
     ListNode *list = creatList(s);
 
-    ListNode *output = changeTwoNode(list, 1, 20);       /**<do some job */
+    ListNode *output = changeTwoNode(list, 2, 1);       /**<do some job */
 
     printList(output);
     std::cout << "\n";

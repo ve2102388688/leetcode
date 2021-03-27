@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// 验证指针大小问题，这个函数其实已经退化成指针了
 int getSize(int data[]) {
     return sizeof(data);
 }

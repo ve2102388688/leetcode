@@ -24,6 +24,15 @@ int hammingWeight(uint32_t n) {
     return ans;
 }
 
+int hammingWeight3(uint32_t n) {
+    int ans = 0;
+    while (n) {
+        ++ans;
+        n = n & (n - 1);
+    }
+    return ans;
+}
+
 int main(int argc, char *argv[])
 {
     int output = hammingWeight(5);

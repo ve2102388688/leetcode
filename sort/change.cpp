@@ -137,14 +137,14 @@ int kth_elem(vector<int>& nums, int k) {
 
 int main(int argc, char* argv[])
 {
-    vector<int> nums = {1, 5, 3, 7, 2, 4, 9, 3, 10, 8, 2};
+    vector<int> nums = {1,2,3,4,5,6};
     // doubleBubbleSort(nums);
     // // quickSort(nums, 0, nums.size()-1);      /**<数组的有效下标 */
     // for (const auto& e : nums)
     //     cout << e << ' ';
     // cout << '\n';
 
-    int output = kth_elem(nums, 8);
+    int output = kth_elem(nums, 2);
     cout << output << '\n';
     return 0;
 }

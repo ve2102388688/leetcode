@@ -28,8 +28,7 @@ vector<string> findRepeatedDnaSequences(string& s) {
 
 int main(int argc, char *argv[])
 {
-    // string s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT";
-    string s = "AAAAAAAAAAAAA";
+    string s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT";
     vector<string> output = findRepeatedDnaSequences(s);
     for(const auto& e : output) {
         cout << e << " ";

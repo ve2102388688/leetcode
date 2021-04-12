@@ -49,7 +49,6 @@ int main(int argc, char *argv[])
     int output = getDecimalValue(list);       /**<do some job */
     std::cout << output << "\n";
 
-    freeList(list);
-    delete list;                            /**<删除链表 */
+    freeList(list);                         /**<删除链表 */
     return 0;
 }

@@ -73,11 +73,8 @@ int main(int argc, char *argv[])
     printList(output);
     std::cout << "\n";
 
-    freeList(list);
-    delete list;                            /**<删除链表 */
-    freeList(list2);
-    delete list2;                            /**<删除链表 */
-    freeList(output);
-    delete output;                            /**<删除链表 */
+    freeList(list);                             /**<删除链表 */
+freeList(list2);                                /**<删除链表 */
+    freeList(output);                           /**<删除链表 */
     return 0;
 }

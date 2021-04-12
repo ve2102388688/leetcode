@@ -70,7 +70,7 @@ void freeList(ListNode* head){
     if(head == NULL)
         return;
     freeList(head->next);
-    delete head->next;
+    delete head;
 }
 
 
